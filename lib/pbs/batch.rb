@@ -24,7 +24,7 @@ module PBS
     # @param host [#to_s] the batch server host
     # @param lib [#to_s] path to torque installation libraries
     # @param bin [#to_s] path to torque installation binaries
-    def initialize(host:, lib: "", bin: "", **_)
+    def initialize(host: nil, lib: "", bin: "", **_)
       @host    = host.to_s
       @lib     = Pathname.new(lib.to_s)
       @bin     = Pathname.new(bin.to_s)
